@@ -50,7 +50,7 @@ jobs:
         env:
           PUBLISH_FLAG: ${{ inputs.publish }}
         run: |
-          if [ "${{ github.repository }}" == "my-smart-homes/operating-system" ]; then
+          if [ "${{ github.repository }}" == "smart-building-manager/operating-system" ]; then
             if [ "${PUBLISH_FLAG}" != "true" ] && [ "${{ github.event_name }}" != "release" ]; then
               echo "publish_build=false" >> "$GITHUB_OUTPUT"
             else
